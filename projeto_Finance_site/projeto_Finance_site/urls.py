@@ -20,5 +20,10 @@ from app_Finance_site import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.home,name = 'home'),#pagina inicial, com introdução e login
+    path('add',views.add, name='add'),#pagina de adicionar dados
+    path('report',views.report,name="report")#pagina de exibir os dados
+    
+   
     
 ]

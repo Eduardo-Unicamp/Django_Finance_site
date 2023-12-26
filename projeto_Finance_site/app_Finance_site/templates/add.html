@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Insertion</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>Insert below the required inputs: </h1>
+        <div>
+            <form id="data_insertion" method="post" action="{% url 'report' %}">
+                {% csrf_token %}
+                <fieldset>
+                    <span>Category<span/> 
+                        <select id="dropdown">
+                          <option>Categoria 1</option>
+                          <option>Categoria 2</option>
+                          <option>Outro</option>
+                        </select>
+                        <br><!--espaçamento improvisado-->
+                    <label id = "descrip-label" for="descrip">Description: <textarea id="descrip" name="descrip" required ></textarea></label>
+                        <br><!--espaçamento improvisado-->
+                    <label id = "value-label" for="value">Value: <input id="value" name="value" type = "number"/> </label>
+                        <br><!--espaçamento improvisado-->
+                </fieldset>
+                <input type="submit" name="submit" id="submit" value="SEND">
+            </form>
+        </div>
+    </body>
+</html>
